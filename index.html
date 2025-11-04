@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mind - Trường học tích cực thông minh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+      }
+    }
+    </script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .nav-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .nav-btn.active {
+            background: rgba(255,255,255,0.3);
+            font-weight: bold;
+        }
+        
+        /* Styles for memory game card flip */
+        .perspective {
+            perspective: 1000px;
+        }
+        .transform-style-preserve-3d {
+            transform-style: preserve-3d;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* Breathing circle animation */
+        .breathing-circle {
+            transition: transform 4s ease-in-out;
+        }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="h-full bg-gradient-to-br from-blue-50 to-purple-50 font-sans">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
